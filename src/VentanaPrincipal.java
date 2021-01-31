@@ -1,5 +1,4 @@
 
-import java.awt.Color;
 import java.util.ArrayList;
 
 /*
@@ -32,6 +31,40 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jDialog1 = new javax.swing.JDialog();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaQuerys = new javax.swing.JTextArea();
+        jPanel1 = new javax.swing.JPanel();
+        jButton_Borrar_Cancion = new javax.swing.JButton();
+        jButtonSelectArtista = new javax.swing.JButton();
+        jTextField_Nombre_borrar_Arts = new javax.swing.JTextField();
+        jButtonSelectAll = new javax.swing.JButton();
+        jTextField_Nombre_borrar_Canc = new javax.swing.JTextField();
+        jButtonSelectCancion = new javax.swing.JButton();
+        jTextField_Nombre_borrar_Album = new javax.swing.JTextField();
+        jButtonSelectAlbum = new javax.swing.JButton();
+        jLabelIUPDATES = new javax.swing.JLabel();
+        jButtonConectar = new javax.swing.JButton();
+        jLabelmodfNombreC = new javax.swing.JLabel();
+        jLabelmodfDuracionC = new javax.swing.JLabel();
+        jLabelmodfAlbumC = new javax.swing.JLabel();
+        jLabelmodfArtistaC = new javax.swing.JLabel();
+        jComboBoxCanciones = new javax.swing.JComboBox<>();
+        jTextField_Duracion_album = new javax.swing.JTextField();
+        jTextField_Modf_Nombre_cancion = new javax.swing.JTextField();
+        jTextField_Nombre_cancion = new javax.swing.JTextField();
+        jTextField_Modf_Duracion_cancion = new javax.swing.JTextField();
+        jTextField_Duracion_cancion = new javax.swing.JTextField();
+        jComboBoxModfAlbumesC = new javax.swing.JComboBox<>();
+        jButton_Añadir_Artista = new javax.swing.JButton();
+        jComboBoxModfArtistasCancion = new javax.swing.JComboBox<>();
+        jButton_Añadir_Album = new javax.swing.JButton();
+        jButtonModificar = new javax.swing.JButton();
+        jButton_Añadir_Cancion = new javax.swing.JButton();
+        jButtonCrearTabla = new javax.swing.JButton();
+        jComboBoxArtistasAlbum = new javax.swing.JComboBox<>();
+        jButtonRellenarTabla = new javax.swing.JButton();
+        jComboBoxAlbumes = new javax.swing.JComboBox<>();
+        jLabelSELECTS = new javax.swing.JLabel();
+        jComboBoxArtistasCancion = new javax.swing.JComboBox<>();
+        jLabelDELETES = new javax.swing.JLabel();
         jLabelDesconectar = new javax.swing.JLabel();
         jLabelALTER_CREATE = new javax.swing.JLabel();
         jButtonDesconectar = new javax.swing.JButton();
@@ -40,51 +73,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jTextField_Nombre_artista = new javax.swing.JTextField();
         jTextField_Nombre_album = new javax.swing.JTextField();
         jTextField_Fech_publ_album = new javax.swing.JTextField();
-        jTextField_Duracion_album = new javax.swing.JTextField();
-        jTextField_Nombre_cancion = new javax.swing.JTextField();
-        jTextField_Duracion_cancion = new javax.swing.JTextField();
-        jButton_Añadir_Artista = new javax.swing.JButton();
-        jButton_Añadir_Album = new javax.swing.JButton();
-        jButton_Añadir_Cancion = new javax.swing.JButton();
-        jComboBoxArtistasAlbum = new javax.swing.JComboBox<>();
-        jComboBoxAlbumes = new javax.swing.JComboBox<>();
-        jComboBoxArtistasCancion = new javax.swing.JComboBox<>();
-        jLabelDELETES = new javax.swing.JLabel();
-        jButton_Borrar_Artista = new javax.swing.JButton();
-        jButton_Borrar_Album = new javax.swing.JButton();
-        jButton_Borrar_Cancion = new javax.swing.JButton();
-        jTextField_Nombre_borrar_Arts = new javax.swing.JTextField();
-        jTextField_Nombre_borrar_Canc = new javax.swing.JTextField();
-        jTextField_Nombre_borrar_Album = new javax.swing.JTextField();
-        jLabelIUPDATES = new javax.swing.JLabel();
-        jLabelmodfNombreC = new javax.swing.JLabel();
-        jLabelmodfDuracionC = new javax.swing.JLabel();
-        jLabelmodfAlbumC = new javax.swing.JLabel();
-        jLabelmodfArtistaC = new javax.swing.JLabel();
-        jComboBoxCanciones = new javax.swing.JComboBox<>();
-        jTextField_Modf_Nombre_cancion = new javax.swing.JTextField();
-        jTextField_Modf_Duracion_cancion = new javax.swing.JTextField();
-        jComboBoxModfAlbumesC = new javax.swing.JComboBox<>();
-        jComboBoxModfArtistasCancion = new javax.swing.JComboBox<>();
-        jButtonModificar = new javax.swing.JButton();
-        jButtonCrearTabla = new javax.swing.JButton();
-        jButtonRellenarTabla = new javax.swing.JButton();
-        jLabelSELECTS = new javax.swing.JLabel();
         jTextFieldBuscar_cancion = new javax.swing.JTextField();
         jTextFieldBuscar_album = new javax.swing.JTextField();
+        jButton_Borrar_Artista = new javax.swing.JButton();
         jButtonBuscarCancion = new javax.swing.JButton();
+        jButton_Borrar_Album = new javax.swing.JButton();
         jButtonBuscarAlbum = new javax.swing.JButton();
-        jButtonSelectArtista = new javax.swing.JButton();
-        jButtonSelectAll = new javax.swing.JButton();
-        jButtonSelectCancion = new javax.swing.JButton();
-        jButtonSelectAlbum = new javax.swing.JButton();
-        jButtonConectar = new javax.swing.JButton();
 
         jDialog1.setResizable(false);
         jDialog1.setSize(new java.awt.Dimension(500, 650));
 
         jTextAreaQuerys.setEditable(false);
+        jTextAreaQuerys.setBackground(new java.awt.Color(0, 255, 204));
         jTextAreaQuerys.setColumns(20);
+        jTextAreaQuerys.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jTextAreaQuerys.setRows(5);
         jScrollPane1.setViewportView(jTextAreaQuerys);
 
@@ -103,410 +105,504 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
 
-        jLabelDesconectar.setText("Manejar conexion con la BBDD");
+        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabelALTER_CREATE.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelALTER_CREATE.setText("EDITAR BASE DE DATOS");
-        jLabelALTER_CREATE.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabelALTER_CREATE.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        jButtonDesconectar.setText("Desconectar");
-        jButtonDesconectar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDesconectarActionPerformed(evt);
-            }
-        });
-
-        jButtonBorrarTabla.setText("BORRAR TABLA");
-        jButtonBorrarTabla.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonBorrarTablaActionPerformed(evt);
-            }
-        });
-
-        jLabelINSERTS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelINSERTS.setText("INSERTAR  DATOS");
-        jLabelINSERTS.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabelINSERTS.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        jTextField_Nombre_artista.setToolTipText("Nombre");
-
-        jTextField_Nombre_album.setToolTipText("Nombre");
-
-        jTextField_Fech_publ_album.setToolTipText("Fecha_Publicacion");
-
-        jTextField_Duracion_album.setToolTipText("Duracion");
-
-        jTextField_Nombre_cancion.setToolTipText("Nombre");
-
-        jTextField_Duracion_cancion.setToolTipText("Duracion");
-
-        jButton_Añadir_Artista.setText("AÑADIR ARTISTA");
-        jButton_Añadir_Artista.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_Añadir_ArtistaActionPerformed(evt);
-            }
-        });
-
-        jButton_Añadir_Album.setText("AÑADIR ALBUM");
-        jButton_Añadir_Album.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_Añadir_AlbumActionPerformed(evt);
-            }
-        });
-
-        jButton_Añadir_Cancion.setText("AÑADIR CANCIÓN");
-        jButton_Añadir_Cancion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_Añadir_CancionActionPerformed(evt);
-            }
-        });
-
-        jComboBoxArtistasAlbum.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBoxAlbumes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBoxArtistasCancion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabelDELETES.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelDELETES.setText("BORRAR  DATOS");
-        jLabelDELETES.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabelDELETES.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        jButton_Borrar_Artista.setText("BORAR ARTISTA");
-        jButton_Borrar_Artista.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_Borrar_ArtistaActionPerformed(evt);
-            }
-        });
-
-        jButton_Borrar_Album.setText("BORRAR ALBUM");
-        jButton_Borrar_Album.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_Borrar_AlbumActionPerformed(evt);
-            }
-        });
-
+        jButton_Borrar_Cancion.setBackground(new java.awt.Color(0, 204, 204));
         jButton_Borrar_Cancion.setText("BORRAR CANCIÓN");
+        jButton_Borrar_Cancion.setBorder(new javax.swing.border.MatteBorder(null));
         jButton_Borrar_Cancion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_Borrar_CancionActionPerformed(evt);
             }
         });
 
-        jTextField_Nombre_borrar_Arts.setToolTipText("Nombre del artista");
-
-        jTextField_Nombre_borrar_Canc.setToolTipText("Nombre de la cancion");
-
-        jTextField_Nombre_borrar_Album.setToolTipText("Nombre del album");
-
-        jLabelIUPDATES.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelIUPDATES.setText("MODIFICAR  DATOS");
-        jLabelIUPDATES.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabelIUPDATES.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        jLabelmodfNombreC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelmodfNombreC.setText("NOMBRE: ");
-        jLabelmodfNombreC.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabelmodfNombreC.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jLabelmodfDuracionC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelmodfDuracionC.setText("DURACIÓN: ");
-        jLabelmodfDuracionC.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabelmodfDuracionC.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jLabelmodfAlbumC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelmodfAlbumC.setText("ALBUM: ");
-        jLabelmodfAlbumC.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabelmodfAlbumC.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jLabelmodfArtistaC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelmodfArtistaC.setText("ARTISTA: ");
-        jLabelmodfArtistaC.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabelmodfArtistaC.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-
-        jComboBoxCanciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jTextField_Modf_Nombre_cancion.setToolTipText("");
-
-        jTextField_Modf_Duracion_cancion.setToolTipText("");
-
-        jComboBoxModfAlbumesC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBoxModfArtistasCancion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jButtonModificar.setText("MODIFICAR");
-        jButtonModificar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonModificarActionPerformed(evt);
-            }
-        });
-
-        jButtonCrearTabla.setText("CREAR TABLA REPRODUCCIONES");
-        jButtonCrearTabla.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCrearTablaActionPerformed(evt);
-            }
-        });
-
-        jButtonRellenarTabla.setText("RELLENAR TABLA");
-        jButtonRellenarTabla.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRellenarTablaActionPerformed(evt);
-            }
-        });
-
-        jLabelSELECTS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelSELECTS.setText("CONSULTAR  DATOS");
-        jLabelSELECTS.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLabelSELECTS.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        jTextFieldBuscar_cancion.setToolTipText("Nombre de la Cancion");
-
-        jTextFieldBuscar_album.setToolTipText("Nombre del album");
-
-        jButtonBuscarCancion.setText("BUSCAR CANCIÓN");
-        jButtonBuscarCancion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonBuscarCancionActionPerformed(evt);
-            }
-        });
-
-        jButtonBuscarAlbum.setText("BUSCAR ALBUM");
-        jButtonBuscarAlbum.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonBuscarAlbumActionPerformed(evt);
-            }
-        });
-
+        jButtonSelectArtista.setBackground(new java.awt.Color(0, 204, 204));
         jButtonSelectArtista.setText("CONSULTAR ARTISTAS");
+        jButtonSelectArtista.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonSelectArtista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSelectArtistaActionPerformed(evt);
             }
         });
 
+        jTextField_Nombre_borrar_Arts.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Nombre_borrar_Arts.setToolTipText("Nombre del artista");
+
+        jButtonSelectAll.setBackground(new java.awt.Color(0, 204, 204));
         jButtonSelectAll.setText("CONSULTAR TODO");
+        jButtonSelectAll.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonSelectAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSelectAllActionPerformed(evt);
             }
         });
 
+        jTextField_Nombre_borrar_Canc.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Nombre_borrar_Canc.setToolTipText("Nombre de la cancion");
+
+        jButtonSelectCancion.setBackground(new java.awt.Color(0, 204, 204));
         jButtonSelectCancion.setText("CONSULTAR CANCIONES");
+        jButtonSelectCancion.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonSelectCancion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSelectCancionActionPerformed(evt);
             }
         });
 
+        jTextField_Nombre_borrar_Album.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Nombre_borrar_Album.setToolTipText("Nombre del album");
+
+        jButtonSelectAlbum.setBackground(new java.awt.Color(0, 204, 204));
         jButtonSelectAlbum.setText("CONSULTAR ALBUMES");
+        jButtonSelectAlbum.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonSelectAlbum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSelectAlbumActionPerformed(evt);
             }
         });
 
+        jLabelIUPDATES.setBackground(new java.awt.Color(0, 153, 153));
+        jLabelIUPDATES.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelIUPDATES.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelIUPDATES.setText("MODIFICAR  DATOS");
+        jLabelIUPDATES.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabelIUPDATES.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabelIUPDATES.setOpaque(true);
+
+        jButtonConectar.setBackground(new java.awt.Color(0, 204, 204));
         jButtonConectar.setText("Conectar/Actualizar");
+        jButtonConectar.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonConectar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonConectarActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jLabelmodfNombreC.setBackground(new java.awt.Color(0, 153, 153));
+        jLabelmodfNombreC.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelmodfNombreC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelmodfNombreC.setText("NOMBRE: ");
+        jLabelmodfNombreC.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabelmodfNombreC.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jLabelmodfNombreC.setOpaque(true);
+
+        jLabelmodfDuracionC.setBackground(new java.awt.Color(0, 153, 153));
+        jLabelmodfDuracionC.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelmodfDuracionC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelmodfDuracionC.setText("DURACIÓN: ");
+        jLabelmodfDuracionC.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabelmodfDuracionC.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jLabelmodfDuracionC.setOpaque(true);
+
+        jLabelmodfAlbumC.setBackground(new java.awt.Color(0, 153, 153));
+        jLabelmodfAlbumC.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelmodfAlbumC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelmodfAlbumC.setText("ALBUM: ");
+        jLabelmodfAlbumC.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabelmodfAlbumC.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jLabelmodfAlbumC.setOpaque(true);
+
+        jLabelmodfArtistaC.setBackground(new java.awt.Color(0, 153, 153));
+        jLabelmodfArtistaC.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelmodfArtistaC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelmodfArtistaC.setText("ARTISTA: ");
+        jLabelmodfArtistaC.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabelmodfArtistaC.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jLabelmodfArtistaC.setOpaque(true);
+
+        jComboBoxCanciones.setBackground(new java.awt.Color(0, 204, 204));
+        jComboBoxCanciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jTextField_Duracion_album.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Duracion_album.setToolTipText("Duracion");
+
+        jTextField_Modf_Nombre_cancion.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Modf_Nombre_cancion.setToolTipText("");
+
+        jTextField_Nombre_cancion.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Nombre_cancion.setToolTipText("Nombre");
+
+        jTextField_Modf_Duracion_cancion.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Modf_Duracion_cancion.setToolTipText("");
+
+        jTextField_Duracion_cancion.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Duracion_cancion.setToolTipText("Duracion");
+
+        jComboBoxModfAlbumesC.setBackground(new java.awt.Color(0, 204, 204));
+        jComboBoxModfAlbumesC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jButton_Añadir_Artista.setBackground(new java.awt.Color(0, 204, 204));
+        jButton_Añadir_Artista.setText("AÑADIR ARTISTA");
+        jButton_Añadir_Artista.setBorder(new javax.swing.border.MatteBorder(null));
+        jButton_Añadir_Artista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_Añadir_ArtistaActionPerformed(evt);
+            }
+        });
+
+        jComboBoxModfArtistasCancion.setBackground(new java.awt.Color(0, 204, 204));
+        jComboBoxModfArtistasCancion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jButton_Añadir_Album.setBackground(new java.awt.Color(0, 204, 204));
+        jButton_Añadir_Album.setText("AÑADIR ALBUM");
+        jButton_Añadir_Album.setBorder(new javax.swing.border.MatteBorder(null));
+        jButton_Añadir_Album.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_Añadir_AlbumActionPerformed(evt);
+            }
+        });
+
+        jButtonModificar.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonModificar.setText("MODIFICAR");
+        jButtonModificar.setBorder(new javax.swing.border.MatteBorder(null));
+        jButtonModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonModificarActionPerformed(evt);
+            }
+        });
+
+        jButton_Añadir_Cancion.setBackground(new java.awt.Color(0, 204, 204));
+        jButton_Añadir_Cancion.setText("AÑADIR CANCIÓN");
+        jButton_Añadir_Cancion.setBorder(new javax.swing.border.MatteBorder(null));
+        jButton_Añadir_Cancion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_Añadir_CancionActionPerformed(evt);
+            }
+        });
+
+        jButtonCrearTabla.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonCrearTabla.setText("CREAR TABLA REPRODUCCIONES");
+        jButtonCrearTabla.setBorder(new javax.swing.border.MatteBorder(null));
+        jButtonCrearTabla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrearTablaActionPerformed(evt);
+            }
+        });
+
+        jComboBoxArtistasAlbum.setBackground(new java.awt.Color(0, 204, 204));
+        jComboBoxArtistasAlbum.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jButtonRellenarTabla.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonRellenarTabla.setText("RELLENAR TABLA");
+        jButtonRellenarTabla.setBorder(new javax.swing.border.MatteBorder(null));
+        jButtonRellenarTabla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRellenarTablaActionPerformed(evt);
+            }
+        });
+
+        jComboBoxAlbumes.setBackground(new java.awt.Color(0, 204, 204));
+        jComboBoxAlbumes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabelSELECTS.setBackground(new java.awt.Color(0, 153, 153));
+        jLabelSELECTS.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelSELECTS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelSELECTS.setText("CONSULTAR  DATOS");
+        jLabelSELECTS.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabelSELECTS.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabelSELECTS.setOpaque(true);
+
+        jComboBoxArtistasCancion.setBackground(new java.awt.Color(0, 204, 204));
+        jComboBoxArtistasCancion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabelDELETES.setBackground(new java.awt.Color(0, 153, 153));
+        jLabelDELETES.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelDELETES.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelDELETES.setText("BORRAR  DATOS");
+        jLabelDELETES.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabelDELETES.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabelDELETES.setOpaque(true);
+
+        jLabelDesconectar.setBackground(new java.awt.Color(0, 153, 153));
+        jLabelDesconectar.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelDesconectar.setText("MANEJAR CONEXIÓN CON LA BBDD");
+        jLabelDesconectar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabelDesconectar.setOpaque(true);
+
+        jLabelALTER_CREATE.setBackground(new java.awt.Color(0, 153, 153));
+        jLabelALTER_CREATE.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelALTER_CREATE.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelALTER_CREATE.setText("EDITAR BASE DE DATOS");
+        jLabelALTER_CREATE.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabelALTER_CREATE.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabelALTER_CREATE.setOpaque(true);
+
+        jButtonDesconectar.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonDesconectar.setText("Desconectar");
+        jButtonDesconectar.setBorder(new javax.swing.border.MatteBorder(null));
+        jButtonDesconectar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDesconectarActionPerformed(evt);
+            }
+        });
+
+        jButtonBorrarTabla.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonBorrarTabla.setText("BORRAR TABLA");
+        jButtonBorrarTabla.setBorder(new javax.swing.border.MatteBorder(null));
+        jButtonBorrarTabla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBorrarTablaActionPerformed(evt);
+            }
+        });
+
+        jLabelINSERTS.setBackground(new java.awt.Color(0, 153, 153));
+        jLabelINSERTS.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelINSERTS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelINSERTS.setText("INSERTAR  DATOS");
+        jLabelINSERTS.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabelINSERTS.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabelINSERTS.setOpaque(true);
+
+        jTextField_Nombre_artista.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Nombre_artista.setToolTipText("Nombre");
+
+        jTextField_Nombre_album.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Nombre_album.setToolTipText("Nombre");
+
+        jTextField_Fech_publ_album.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Fech_publ_album.setToolTipText("Fecha_Publicacion");
+
+        jTextFieldBuscar_cancion.setBackground(new java.awt.Color(0, 255, 204));
+        jTextFieldBuscar_cancion.setToolTipText("Nombre de la Cancion");
+
+        jTextFieldBuscar_album.setBackground(new java.awt.Color(0, 255, 204));
+        jTextFieldBuscar_album.setToolTipText("Nombre del album");
+
+        jButton_Borrar_Artista.setBackground(new java.awt.Color(0, 204, 204));
+        jButton_Borrar_Artista.setText("BORAR ARTISTA");
+        jButton_Borrar_Artista.setBorder(new javax.swing.border.MatteBorder(null));
+        jButton_Borrar_Artista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_Borrar_ArtistaActionPerformed(evt);
+            }
+        });
+
+        jButtonBuscarCancion.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonBuscarCancion.setText("BUSCAR CANCIÓN");
+        jButtonBuscarCancion.setBorder(new javax.swing.border.MatteBorder(null));
+        jButtonBuscarCancion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarCancionActionPerformed(evt);
+            }
+        });
+
+        jButton_Borrar_Album.setBackground(new java.awt.Color(0, 204, 204));
+        jButton_Borrar_Album.setText("BORRAR ALBUM");
+        jButton_Borrar_Album.setBorder(new javax.swing.border.MatteBorder(null));
+        jButton_Borrar_Album.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_Borrar_AlbumActionPerformed(evt);
+            }
+        });
+
+        jButtonBuscarAlbum.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonBuscarAlbum.setText("BUSCAR ALBUM");
+        jButtonBuscarAlbum.setBorder(new javax.swing.border.MatteBorder(null));
+        jButtonBuscarAlbum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarAlbumActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabelDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonConectar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabelmodfArtistaC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabelmodfAlbumC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabelmodfDuracionC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabelmodfNombreC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxCanciones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(147, 147, 147))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabelmodfArtistaC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabelmodfAlbumC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabelmodfDuracionC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
-                                    .addComponent(jLabelmodfNombreC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBoxCanciones, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField_Modf_Duracion_cancion)
-                                    .addComponent(jTextField_Modf_Nombre_cancion)
-                                    .addComponent(jComboBoxModfAlbumesC, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBoxModfArtistasCancion, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(49, 49, 49)
-                                .addComponent(jButtonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabelINSERTS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelALTER_CREATE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton_Añadir_Artista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField_Nombre_artista))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField_Nombre_album, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                                    .addComponent(jTextField_Fech_publ_album, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                                    .addComponent(jTextField_Duracion_album, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                                    .addComponent(jButton_Añadir_Album, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBoxArtistasAlbum, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jTextField_Nombre_cancion, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                                    .addComponent(jTextField_Duracion_cancion, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                                    .addComponent(jButton_Añadir_Cancion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBoxAlbumes, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBoxArtistasCancion, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(jLabelDELETES, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField_Nombre_borrar_Arts, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton_Borrar_Artista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton_Borrar_Album, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField_Nombre_borrar_Album))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField_Nombre_borrar_Canc)
-                                    .addComponent(jButton_Borrar_Cancion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(jLabelIUPDATES, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelSELECTS, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField_Modf_Duracion_cancion)
+                            .addComponent(jTextField_Modf_Nombre_cancion)
+                            .addComponent(jComboBoxModfAlbumesC, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxModfArtistasCancion, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(49, 49, 49)
+                        .addComponent(jButtonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelINSERTS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelALTER_CREATE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton_Añadir_Artista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField_Nombre_artista))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField_Nombre_album)
+                            .addComponent(jTextField_Fech_publ_album)
+                            .addComponent(jTextField_Duracion_album)
+                            .addComponent(jButton_Añadir_Album, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxArtistasAlbum, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jTextField_Nombre_cancion)
+                            .addComponent(jTextField_Duracion_cancion)
+                            .addComponent(jButton_Añadir_Cancion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxAlbumes, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxArtistasCancion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabelDELETES, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField_Nombre_borrar_Arts, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton_Borrar_Artista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton_Borrar_Album, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField_Nombre_borrar_Album))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField_Nombre_borrar_Canc)
+                            .addComponent(jButton_Borrar_Cancion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jLabelIUPDATES, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelSELECTS, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButtonBuscarCancion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonBuscarAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldBuscar_cancion)
+                            .addComponent(jTextFieldBuscar_album, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(44, 44, 44)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButtonSelectArtista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonSelectAll, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonSelectAlbum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonSelectCancion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jButtonCrearTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButtonRellenarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonBorrarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButtonBuscarCancion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButtonBuscarAlbum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jButtonBorrarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabelDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextFieldBuscar_cancion, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldBuscar_album))
-                                .addGap(44, 44, 44)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButtonSelectArtista, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                                    .addComponent(jButtonSelectAll, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jButtonConectar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButtonSelectAlbum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButtonSelectCancion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addContainerGap())))
+                                .addComponent(jButtonDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 29, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonConectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(4, 4, 4)
+                .addGap(18, 18, 18)
                 .addComponent(jLabelALTER_CREATE, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonBorrarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonCrearTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonRellenarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addComponent(jLabelINSERTS, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton_Añadir_Artista)
-                            .addComponent(jButton_Añadir_Album)
-                            .addComponent(jButton_Añadir_Cancion))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField_Nombre_album, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField_Fech_publ_album, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField_Duracion_album, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxAlbumes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField_Nombre_artista, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField_Nombre_cancion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField_Duracion_cancion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(41, 41, 41)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jComboBoxArtistasAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBoxArtistasCancion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(32, 32, 32)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton_Añadir_Artista, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton_Añadir_Album, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_Añadir_Cancion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField_Nombre_album, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Nombre_artista, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Nombre_cancion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField_Fech_publ_album, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Duracion_cancion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField_Duracion_album, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxAlbumes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBoxArtistasAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxArtistasCancion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(jLabelIUPDATES, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jComboBoxCanciones, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabelmodfNombreC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabelmodfDuracionC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jTextField_Modf_Nombre_cancion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField_Modf_Duracion_cancion)))
+                        .addComponent(jTextField_Modf_Duracion_cancion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jComboBoxModfAlbumesC, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(jLabelmodfAlbumC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jComboBoxModfAlbumesC)
+                    .addComponent(jLabelmodfAlbumC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelmodfArtistaC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxModfArtistasCancion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                .addGap(27, 27, 27)
                 .addComponent(jLabelDELETES, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_Borrar_Artista)
-                    .addComponent(jButton_Borrar_Album)
-                    .addComponent(jButton_Borrar_Cancion))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jButton_Borrar_Artista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_Borrar_Album, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_Borrar_Cancion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTextField_Nombre_borrar_Album)
                     .addComponent(jTextField_Nombre_borrar_Canc)
                     .addComponent(jTextField_Nombre_borrar_Arts, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addComponent(jLabelSELECTS, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButtonSelectAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonSelectCancion, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldBuscar_cancion, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                            .addComponent(jButtonSelectAll, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButtonSelectCancion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldBuscar_cancion)
+                            .addComponent(jButtonSelectAll, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jTextFieldBuscar_album, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jButtonBuscarAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jButtonSelectArtista, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jButtonBuscarCancion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jTextField_Nombre_artista.getAccessibleContext().setAccessibleName("");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
         setLocationRelativeTo(null);
@@ -774,6 +870,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelmodfArtistaC;
     private javax.swing.JLabel jLabelmodfDuracionC;
     private javax.swing.JLabel jLabelmodfNombreC;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextAreaQuerys;
     private javax.swing.JTextField jTextFieldBuscar_album;
