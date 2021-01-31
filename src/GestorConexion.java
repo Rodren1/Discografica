@@ -23,7 +23,8 @@ public class GestorConexion {
 
     Connection conn1 = null;
 
-    public GestorConexion() {
+    public int GestorConexion() {
+        int aux = 1;
         try {
             String urlBBDD = "jdbc:mysql://localhost:3306/discograficaJavierBermejo?serverTimexone=UTC";
             String user = "root";
@@ -32,12 +33,13 @@ public class GestorConexion {
             conn1 = DriverManager.getConnection(urlBBDD, user, password);
 
             if (conn1 != null) {
-                System.out.println("Conectado a discográfica");
-            }
+                aux = 0;
+            }else
+                aux = 1;
         } catch (SQLException ex) {
-            System.out.println("Error en la conexion a discográfica");
-            ex.printStackTrace();
+            aux = -1;
         }
+        return aux;
     }
 
     public void cerrar_conexion() {
@@ -64,27 +66,45 @@ public class GestorConexion {
             System.out.println(ex.toString());
         }
     }
-
-    public void alterCanciones() {
+     */
+    
+    public void createTable(){
         try {
             Statement sta = conn1.createStatement();
-            sta.executeUpdate("ALTER TABLE canciones ADD IF NOT EXISTS artista INT(11), ADD CONSTRAINT `canciones_ibfk_2` FOREIGN KEY (`artista`) "
-                    + "REFERENCES `artistas` (`id_artista`) ON DELETE CASCADE ON UPDATE CASCADE;");
+            sta.executeUpdate("CREATE TABLE reproducciones ("
+                    + "`id_reproducciones` int(11) NOT NULL AUTO_INCREMENT,"
+                    + "`album_r` int(11) NOT NULL,"
+                    + "`reproducciones_locales` varchar(20) DEFAULT NULL,"
+                    + "`reproducciones_globales` varchar(20) DEFAULT NULL,"
+                    + "PRIMARY KEY (`id_reproducciones`),"
+                    + "FOREIGN KEY (`album_r`) REFERENCES `albumes` (`id_album`) ON DELETE CASCADE ON UPDATE CASCADE"
+                    + ")ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;");
             sta.close();
-            System.out.println("Tabla modificada correctamente");
+            System.out.println("Tabla creada correctamente");
         } catch (SQLException ex) {
             System.out.println(ex.toString());
         }
     }
-     */
+    
+    public void fillTable(){
+        try {
+            Statement sta = conn1.createStatement();
+            sta.executeUpdate("INSERT INTO `reproducciones` (`album_r`, `reproducciones_locales`, `reproducciones_globales`) VALUES" 
+                                + "(1, '10.340.026', '35.105.659')," 
+                                + "(2, '191.026', '9.330.704')," 
+                                + "(3, '256.026', '50.703.812')," 
+                                + "(4, '3.340.026', '3.119.249');");
+            sta.close();
+            System.out.println("Datos insertados correctamente");
+        } catch (SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
+    
     public void dropTable() {
         try {
             Statement sta = conn1.createStatement();
-            sta.executeUpdate("ALTER TABLE albumes DROP CONSTRAINT IF EXISTS albumes_ibfk_1");
-            sta.executeUpdate("ALTER TABLE albumes DROP IF EXISTS artista");
-            sta.executeUpdate("ALTER TABLE canciones DROP CONSTRAINT IF EXISTS canciones_ibfk_2");
-            sta.executeUpdate("ALTER TABLE canciones DROP IF EXISTS artista ");
-            sta.executeUpdate("DROP TABLE IF EXISTS artistas");
+            sta.executeUpdate("DROP TABLE IF EXISTS reproducciones");
             sta.close();
             System.out.println("Tabla borrada correctamente");
         } catch (SQLException ex) {
