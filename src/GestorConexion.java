@@ -27,7 +27,7 @@ public class GestorConexion {
         int aux = 1;
         try {
             String user = "root";
-            String password = "root";
+            String password = "";
 
             conn1 = DriverManager.getConnection(urlBBDD, user, password);
 
