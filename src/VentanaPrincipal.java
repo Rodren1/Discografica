@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,6 +18,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public VentanaPrincipal() {
         initComponents();
         deshabilitarBotones();
+        setIconImage(new ImageIcon(getClass().getResource("/img/icons8-cd-30.png")).getImage());
     }
 
     /**
@@ -79,12 +81,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButtonBuscarCancion = new javax.swing.JButton();
         jButton_Borrar_Album = new javax.swing.JButton();
         jButtonBuscarAlbum = new javax.swing.JButton();
+        jButtonModoNoche = new javax.swing.JButton();
+        jButtonModoDia = new javax.swing.JButton();
 
         jDialog1.setResizable(false);
         jDialog1.setSize(new java.awt.Dimension(500, 650));
 
         jTextAreaQuerys.setEditable(false);
-        jTextAreaQuerys.setBackground(new java.awt.Color(0, 255, 204));
+        jTextAreaQuerys.setBackground(new java.awt.Color(102, 204, 255));
         jTextAreaQuerys.setColumns(20);
         jTextAreaQuerys.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jTextAreaQuerys.setRows(5);
@@ -105,10 +109,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton_Borrar_Cancion.setBackground(new java.awt.Color(0, 204, 204));
+        jButton_Borrar_Cancion.setBackground(new java.awt.Color(51, 204, 255));
         jButton_Borrar_Cancion.setText("BORRAR CANCIÓN");
         jButton_Borrar_Cancion.setBorder(new javax.swing.border.MatteBorder(null));
         jButton_Borrar_Cancion.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +121,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButtonSelectArtista.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonSelectArtista.setBackground(new java.awt.Color(51, 204, 255));
         jButtonSelectArtista.setText("CONSULTAR ARTISTAS");
         jButtonSelectArtista.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonSelectArtista.addActionListener(new java.awt.event.ActionListener() {
@@ -126,10 +130,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jTextField_Nombre_borrar_Arts.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Nombre_borrar_Arts.setBackground(new java.awt.Color(102, 204, 255));
         jTextField_Nombre_borrar_Arts.setToolTipText("Nombre del artista");
 
-        jButtonSelectAll.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonSelectAll.setBackground(new java.awt.Color(51, 204, 255));
         jButtonSelectAll.setText("CONSULTAR TODO");
         jButtonSelectAll.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonSelectAll.addActionListener(new java.awt.event.ActionListener() {
@@ -138,10 +142,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jTextField_Nombre_borrar_Canc.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Nombre_borrar_Canc.setBackground(new java.awt.Color(102, 204, 255));
         jTextField_Nombre_borrar_Canc.setToolTipText("Nombre de la cancion");
 
-        jButtonSelectCancion.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonSelectCancion.setBackground(new java.awt.Color(51, 204, 255));
         jButtonSelectCancion.setText("CONSULTAR CANCIONES");
         jButtonSelectCancion.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonSelectCancion.addActionListener(new java.awt.event.ActionListener() {
@@ -150,10 +154,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jTextField_Nombre_borrar_Album.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Nombre_borrar_Album.setBackground(new java.awt.Color(102, 204, 255));
         jTextField_Nombre_borrar_Album.setToolTipText("Nombre del album");
 
-        jButtonSelectAlbum.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonSelectAlbum.setBackground(new java.awt.Color(51, 204, 255));
         jButtonSelectAlbum.setText("CONSULTAR ALBUMES");
         jButtonSelectAlbum.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonSelectAlbum.addActionListener(new java.awt.event.ActionListener() {
@@ -162,15 +166,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jLabelIUPDATES.setBackground(new java.awt.Color(0, 153, 153));
-        jLabelIUPDATES.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelIUPDATES.setBackground(new java.awt.Color(153, 204, 255));
         jLabelIUPDATES.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelIUPDATES.setText("MODIFICAR  DATOS");
         jLabelIUPDATES.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabelIUPDATES.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabelIUPDATES.setOpaque(true);
 
-        jButtonConectar.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonConectar.setBackground(new java.awt.Color(51, 204, 255));
         jButtonConectar.setText("Conectar/Actualizar");
         jButtonConectar.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonConectar.addActionListener(new java.awt.event.ActionListener() {
@@ -179,60 +182,56 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jLabelmodfNombreC.setBackground(new java.awt.Color(0, 153, 153));
-        jLabelmodfNombreC.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelmodfNombreC.setBackground(new java.awt.Color(153, 204, 255));
         jLabelmodfNombreC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelmodfNombreC.setText("NOMBRE: ");
         jLabelmodfNombreC.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabelmodfNombreC.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jLabelmodfNombreC.setOpaque(true);
 
-        jLabelmodfDuracionC.setBackground(new java.awt.Color(0, 153, 153));
-        jLabelmodfDuracionC.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelmodfDuracionC.setBackground(new java.awt.Color(153, 204, 255));
         jLabelmodfDuracionC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelmodfDuracionC.setText("DURACIÓN: ");
         jLabelmodfDuracionC.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabelmodfDuracionC.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jLabelmodfDuracionC.setOpaque(true);
 
-        jLabelmodfAlbumC.setBackground(new java.awt.Color(0, 153, 153));
-        jLabelmodfAlbumC.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelmodfAlbumC.setBackground(new java.awt.Color(153, 204, 255));
         jLabelmodfAlbumC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelmodfAlbumC.setText("ALBUM: ");
         jLabelmodfAlbumC.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabelmodfAlbumC.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jLabelmodfAlbumC.setOpaque(true);
 
-        jLabelmodfArtistaC.setBackground(new java.awt.Color(0, 153, 153));
-        jLabelmodfArtistaC.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelmodfArtistaC.setBackground(new java.awt.Color(153, 204, 255));
         jLabelmodfArtistaC.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelmodfArtistaC.setText("ARTISTA: ");
         jLabelmodfArtistaC.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabelmodfArtistaC.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jLabelmodfArtistaC.setOpaque(true);
 
-        jComboBoxCanciones.setBackground(new java.awt.Color(0, 204, 204));
+        jComboBoxCanciones.setBackground(new java.awt.Color(51, 204, 255));
         jComboBoxCanciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jTextField_Duracion_album.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Duracion_album.setBackground(new java.awt.Color(102, 204, 255));
         jTextField_Duracion_album.setToolTipText("Duracion");
 
-        jTextField_Modf_Nombre_cancion.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Modf_Nombre_cancion.setBackground(new java.awt.Color(102, 204, 255));
         jTextField_Modf_Nombre_cancion.setToolTipText("");
 
-        jTextField_Nombre_cancion.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Nombre_cancion.setBackground(new java.awt.Color(102, 204, 255));
         jTextField_Nombre_cancion.setToolTipText("Nombre");
 
-        jTextField_Modf_Duracion_cancion.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Modf_Duracion_cancion.setBackground(new java.awt.Color(102, 204, 255));
         jTextField_Modf_Duracion_cancion.setToolTipText("");
 
-        jTextField_Duracion_cancion.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Duracion_cancion.setBackground(new java.awt.Color(102, 204, 255));
         jTextField_Duracion_cancion.setToolTipText("Duracion");
 
-        jComboBoxModfAlbumesC.setBackground(new java.awt.Color(0, 204, 204));
+        jComboBoxModfAlbumesC.setBackground(new java.awt.Color(51, 204, 255));
         jComboBoxModfAlbumesC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton_Añadir_Artista.setBackground(new java.awt.Color(0, 204, 204));
+        jButton_Añadir_Artista.setBackground(new java.awt.Color(51, 204, 255));
         jButton_Añadir_Artista.setText("AÑADIR ARTISTA");
         jButton_Añadir_Artista.setBorder(new javax.swing.border.MatteBorder(null));
         jButton_Añadir_Artista.addActionListener(new java.awt.event.ActionListener() {
@@ -241,10 +240,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jComboBoxModfArtistasCancion.setBackground(new java.awt.Color(0, 204, 204));
+        jComboBoxModfArtistasCancion.setBackground(new java.awt.Color(51, 204, 255));
         jComboBoxModfArtistasCancion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton_Añadir_Album.setBackground(new java.awt.Color(0, 204, 204));
+        jButton_Añadir_Album.setBackground(new java.awt.Color(51, 204, 255));
         jButton_Añadir_Album.setText("AÑADIR ALBUM");
         jButton_Añadir_Album.setBorder(new javax.swing.border.MatteBorder(null));
         jButton_Añadir_Album.addActionListener(new java.awt.event.ActionListener() {
@@ -253,7 +252,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButtonModificar.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonModificar.setBackground(new java.awt.Color(51, 204, 255));
         jButtonModificar.setText("MODIFICAR");
         jButtonModificar.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonModificar.addActionListener(new java.awt.event.ActionListener() {
@@ -262,7 +261,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButton_Añadir_Cancion.setBackground(new java.awt.Color(0, 204, 204));
+        jButton_Añadir_Cancion.setBackground(new java.awt.Color(51, 204, 255));
         jButton_Añadir_Cancion.setText("AÑADIR CANCIÓN");
         jButton_Añadir_Cancion.setBorder(new javax.swing.border.MatteBorder(null));
         jButton_Añadir_Cancion.addActionListener(new java.awt.event.ActionListener() {
@@ -271,7 +270,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButtonCrearTabla.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonCrearTabla.setBackground(new java.awt.Color(51, 204, 255));
         jButtonCrearTabla.setText("CREAR TABLA REPRODUCCIONES");
         jButtonCrearTabla.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonCrearTabla.addActionListener(new java.awt.event.ActionListener() {
@@ -280,10 +279,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jComboBoxArtistasAlbum.setBackground(new java.awt.Color(0, 204, 204));
+        jComboBoxArtistasAlbum.setBackground(new java.awt.Color(51, 204, 255));
         jComboBoxArtistasAlbum.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButtonRellenarTabla.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonRellenarTabla.setBackground(new java.awt.Color(51, 204, 255));
         jButtonRellenarTabla.setText("RELLENAR TABLA");
         jButtonRellenarTabla.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonRellenarTabla.addActionListener(new java.awt.event.ActionListener() {
@@ -292,43 +291,39 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jComboBoxAlbumes.setBackground(new java.awt.Color(0, 204, 204));
+        jComboBoxAlbumes.setBackground(new java.awt.Color(51, 204, 255));
         jComboBoxAlbumes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabelSELECTS.setBackground(new java.awt.Color(0, 153, 153));
-        jLabelSELECTS.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelSELECTS.setBackground(new java.awt.Color(153, 204, 255));
         jLabelSELECTS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelSELECTS.setText("CONSULTAR  DATOS");
         jLabelSELECTS.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabelSELECTS.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabelSELECTS.setOpaque(true);
 
-        jComboBoxArtistasCancion.setBackground(new java.awt.Color(0, 204, 204));
+        jComboBoxArtistasCancion.setBackground(new java.awt.Color(51, 204, 255));
         jComboBoxArtistasCancion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabelDELETES.setBackground(new java.awt.Color(0, 153, 153));
-        jLabelDELETES.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelDELETES.setBackground(new java.awt.Color(153, 204, 255));
         jLabelDELETES.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelDELETES.setText("BORRAR  DATOS");
         jLabelDELETES.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabelDELETES.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabelDELETES.setOpaque(true);
 
-        jLabelDesconectar.setBackground(new java.awt.Color(0, 153, 153));
-        jLabelDesconectar.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelDesconectar.setBackground(new java.awt.Color(153, 204, 255));
         jLabelDesconectar.setText("MANEJAR CONEXIÓN CON LA BBDD");
         jLabelDesconectar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabelDesconectar.setOpaque(true);
 
-        jLabelALTER_CREATE.setBackground(new java.awt.Color(0, 153, 153));
-        jLabelALTER_CREATE.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelALTER_CREATE.setBackground(new java.awt.Color(153, 204, 255));
         jLabelALTER_CREATE.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelALTER_CREATE.setText("EDITAR BASE DE DATOS");
         jLabelALTER_CREATE.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabelALTER_CREATE.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabelALTER_CREATE.setOpaque(true);
 
-        jButtonDesconectar.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonDesconectar.setBackground(new java.awt.Color(51, 204, 255));
         jButtonDesconectar.setText("Desconectar");
         jButtonDesconectar.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonDesconectar.addActionListener(new java.awt.event.ActionListener() {
@@ -337,7 +332,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButtonBorrarTabla.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonBorrarTabla.setBackground(new java.awt.Color(51, 204, 255));
         jButtonBorrarTabla.setText("BORRAR TABLA");
         jButtonBorrarTabla.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonBorrarTabla.addActionListener(new java.awt.event.ActionListener() {
@@ -346,30 +341,29 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jLabelINSERTS.setBackground(new java.awt.Color(0, 153, 153));
-        jLabelINSERTS.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelINSERTS.setBackground(new java.awt.Color(153, 204, 255));
         jLabelINSERTS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelINSERTS.setText("INSERTAR  DATOS");
         jLabelINSERTS.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabelINSERTS.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabelINSERTS.setOpaque(true);
 
-        jTextField_Nombre_artista.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Nombre_artista.setBackground(new java.awt.Color(102, 204, 255));
         jTextField_Nombre_artista.setToolTipText("Nombre");
 
-        jTextField_Nombre_album.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Nombre_album.setBackground(new java.awt.Color(102, 204, 255));
         jTextField_Nombre_album.setToolTipText("Nombre");
 
-        jTextField_Fech_publ_album.setBackground(new java.awt.Color(0, 255, 204));
+        jTextField_Fech_publ_album.setBackground(new java.awt.Color(102, 204, 255));
         jTextField_Fech_publ_album.setToolTipText("Fecha_Publicacion");
 
-        jTextFieldBuscar_cancion.setBackground(new java.awt.Color(0, 255, 204));
+        jTextFieldBuscar_cancion.setBackground(new java.awt.Color(102, 204, 255));
         jTextFieldBuscar_cancion.setToolTipText("Nombre de la Cancion");
 
-        jTextFieldBuscar_album.setBackground(new java.awt.Color(0, 255, 204));
+        jTextFieldBuscar_album.setBackground(new java.awt.Color(102, 204, 255));
         jTextFieldBuscar_album.setToolTipText("Nombre del album");
 
-        jButton_Borrar_Artista.setBackground(new java.awt.Color(0, 204, 204));
+        jButton_Borrar_Artista.setBackground(new java.awt.Color(51, 204, 255));
         jButton_Borrar_Artista.setText("BORAR ARTISTA");
         jButton_Borrar_Artista.setBorder(new javax.swing.border.MatteBorder(null));
         jButton_Borrar_Artista.addActionListener(new java.awt.event.ActionListener() {
@@ -378,7 +372,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButtonBuscarCancion.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonBuscarCancion.setBackground(new java.awt.Color(51, 204, 255));
         jButtonBuscarCancion.setText("BUSCAR CANCIÓN");
         jButtonBuscarCancion.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonBuscarCancion.addActionListener(new java.awt.event.ActionListener() {
@@ -387,7 +381,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButton_Borrar_Album.setBackground(new java.awt.Color(0, 204, 204));
+        jButton_Borrar_Album.setBackground(new java.awt.Color(51, 204, 255));
         jButton_Borrar_Album.setText("BORRAR ALBUM");
         jButton_Borrar_Album.setBorder(new javax.swing.border.MatteBorder(null));
         jButton_Borrar_Album.addActionListener(new java.awt.event.ActionListener() {
@@ -396,12 +390,30 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButtonBuscarAlbum.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonBuscarAlbum.setBackground(new java.awt.Color(51, 204, 255));
         jButtonBuscarAlbum.setText("BUSCAR ALBUM");
         jButtonBuscarAlbum.setBorder(new javax.swing.border.MatteBorder(null));
         jButtonBuscarAlbum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonBuscarAlbumActionPerformed(evt);
+            }
+        });
+
+        jButtonModoNoche.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonModoNoche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-luna-brillante-32 (2).png"))); // NOI18N
+        jButtonModoNoche.setBorder(new javax.swing.border.MatteBorder(null));
+        jButtonModoNoche.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonModoNocheActionPerformed(evt);
+            }
+        });
+
+        jButtonModoDia.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonModoDia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-salida-del-sol-32.png"))); // NOI18N
+        jButtonModoDia.setBorder(new javax.swing.border.MatteBorder(null));
+        jButtonModoDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonModoDiaActionPerformed(evt);
             }
         });
 
@@ -478,33 +490,38 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonSelectAlbum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonSelectCancion, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabelDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonConectar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButtonCrearTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonRellenarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButtonBorrarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButtonBorrarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButtonCrearTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonRellenarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabelDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonConectar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonModoDia, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonModoNoche, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonConectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabelDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonConectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonModoNoche, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonModoDia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelALTER_CREATE, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -535,7 +552,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBoxArtistasAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxArtistasCancion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
                 .addComponent(jLabelIUPDATES, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jComboBoxCanciones, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -720,6 +737,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonConectarActionPerformed
 
+    private void jButtonModoNocheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModoNocheActionPerformed
+        modoNoche();
+    }//GEN-LAST:event_jButtonModoNocheActionPerformed
+
+    private void jButtonModoDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModoDiaActionPerformed
+        modoDia();
+    }//GEN-LAST:event_jButtonModoDiaActionPerformed
+
     private void rellenarBoxArtistas() {
         jComboBoxArtistasAlbum.removeAllItems();
         jComboBoxArtistasCancion.removeAllItems();
@@ -843,6 +868,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCrearTabla;
     private javax.swing.JButton jButtonDesconectar;
     private javax.swing.JButton jButtonModificar;
+    private javax.swing.JButton jButtonModoDia;
+    private javax.swing.JButton jButtonModoNoche;
     private javax.swing.JButton jButtonRellenarTabla;
     private javax.swing.JButton jButtonSelectAlbum;
     private javax.swing.JButton jButtonSelectAll;
@@ -888,4 +915,214 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField_Nombre_borrar_Canc;
     private javax.swing.JTextField jTextField_Nombre_cancion;
     // End of variables declaration//GEN-END:variables
+
+    public void modoNoche() {
+        jTextAreaQuerys.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(0, 51, 51));
+        jButton_Borrar_Cancion.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonSelectArtista.setBackground(new java.awt.Color(0, 102, 102));
+        jTextField_Nombre_borrar_Arts.setBackground(new java.awt.Color(0, 153, 153));
+        jButtonSelectAll.setBackground(new java.awt.Color(0, 102, 102));
+        jTextField_Nombre_borrar_Canc.setBackground(new java.awt.Color(0, 153, 153));
+        jButtonSelectCancion.setBackground(new java.awt.Color(0, 102, 102));
+        jTextField_Nombre_borrar_Album.setBackground(new java.awt.Color(0, 153, 153));
+        jButtonSelectAlbum.setBackground(new java.awt.Color(0, 102, 102));
+        jLabelIUPDATES.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonConectar.setBackground(new java.awt.Color(0, 102, 102));
+        jLabelmodfNombreC.setBackground(new java.awt.Color(0, 102, 102));
+        jLabelmodfDuracionC.setBackground(new java.awt.Color(0, 102, 102));
+        jLabelmodfAlbumC.setBackground(new java.awt.Color(0, 102, 102));
+        jLabelmodfArtistaC.setBackground(new java.awt.Color(0, 102, 102));
+        jComboBoxCanciones.setBackground(new java.awt.Color(0, 102, 102));
+        jTextField_Duracion_album.setBackground(new java.awt.Color(0, 153, 153));
+        jTextField_Modf_Nombre_cancion.setBackground(new java.awt.Color(0, 153, 153));
+        jTextField_Nombre_cancion.setBackground(new java.awt.Color(0, 153, 153));
+        jTextField_Modf_Duracion_cancion.setBackground(new java.awt.Color(0, 153, 153));
+        jTextField_Duracion_cancion.setBackground(new java.awt.Color(0, 153, 153));
+        jComboBoxModfAlbumesC.setBackground(new java.awt.Color(0, 102, 102));
+        jButton_Añadir_Artista.setBackground(new java.awt.Color(0, 102, 102));
+        jComboBoxModfArtistasCancion.setBackground(new java.awt.Color(0, 102, 102));
+        jButton_Añadir_Album.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonModificar.setBackground(new java.awt.Color(0, 102, 102));
+        jButton_Añadir_Cancion.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonCrearTabla.setBackground(new java.awt.Color(0, 102, 102));
+        jComboBoxArtistasAlbum.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonRellenarTabla.setBackground(new java.awt.Color(0, 102, 102));
+        jComboBoxAlbumes.setBackground(new java.awt.Color(0, 102, 102));
+        jLabelSELECTS.setBackground(new java.awt.Color(0, 102, 102));
+        jComboBoxArtistasCancion.setBackground(new java.awt.Color(0, 102, 102));
+        jLabelDELETES.setBackground(new java.awt.Color(0, 102, 102));
+        jLabelDesconectar.setBackground(new java.awt.Color(0, 102, 102));
+        jLabelALTER_CREATE.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonDesconectar.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonBorrarTabla.setBackground(new java.awt.Color(0, 102, 102));
+        jLabelINSERTS.setBackground(new java.awt.Color(0, 102, 102));
+        jTextField_Nombre_artista.setBackground(new java.awt.Color(0, 153, 153));
+        jTextField_Nombre_album.setBackground(new java.awt.Color(0, 153, 153));
+        jTextField_Fech_publ_album.setBackground(new java.awt.Color(0, 153, 153));
+        jTextFieldBuscar_cancion.setBackground(new java.awt.Color(0, 153, 153));
+        jTextFieldBuscar_album.setBackground(new java.awt.Color(0, 153, 153));
+        jButton_Borrar_Artista.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonBuscarCancion.setBackground(new java.awt.Color(0, 102, 102));
+        jButton_Borrar_Album.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonBuscarAlbum.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonModoNoche.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonModoDia.setBackground(new java.awt.Color(0, 102, 102));
+        jTextAreaQuerys.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_Borrar_Cancion.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSelectArtista.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField_Nombre_borrar_Arts.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSelectAll.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField_Nombre_borrar_Canc.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSelectCancion.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField_Nombre_borrar_Album.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSelectAlbum.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelIUPDATES.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonConectar.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelmodfNombreC.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelmodfDuracionC.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelmodfAlbumC.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelmodfArtistaC.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBoxCanciones.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField_Duracion_album.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField_Modf_Nombre_cancion.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField_Nombre_cancion.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField_Modf_Duracion_cancion.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField_Duracion_cancion.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBoxModfAlbumesC.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_Añadir_Artista.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBoxModfArtistasCancion.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_Añadir_Album.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonModificar.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_Añadir_Cancion.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonCrearTabla.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBoxArtistasAlbum.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRellenarTabla.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBoxAlbumes.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelSELECTS.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBoxArtistasCancion.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelDELETES.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelDesconectar.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelALTER_CREATE.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonDesconectar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonBorrarTabla.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelINSERTS.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField_Nombre_artista.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField_Nombre_album.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField_Fech_publ_album.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldBuscar_cancion.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldBuscar_album.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_Borrar_Artista.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonBuscarCancion.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_Borrar_Album.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonBuscarAlbum.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonModoNoche.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonModoDia.setForeground(new java.awt.Color(255, 255, 255));
+    }
+
+    public void modoDia() {
+        jTextAreaQuerys.setBackground(new java.awt.Color(102, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jButton_Borrar_Cancion.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonSelectArtista.setBackground(new java.awt.Color(51, 204, 255));
+        jTextField_Nombre_borrar_Arts.setBackground(new java.awt.Color(102, 204, 255));
+        jButtonSelectAll.setBackground(new java.awt.Color(51, 204, 255));
+        jTextField_Nombre_borrar_Canc.setBackground(new java.awt.Color(102, 204, 255));
+        jButtonSelectCancion.setBackground(new java.awt.Color(51, 204, 255));
+        jTextField_Nombre_borrar_Album.setBackground(new java.awt.Color(102, 204, 255));
+        jButtonSelectAlbum.setBackground(new java.awt.Color(51, 204, 255));
+        jLabelIUPDATES.setBackground(new java.awt.Color(153, 204, 255));
+        jButtonConectar.setBackground(new java.awt.Color(51, 204, 255));
+        jLabelmodfNombreC.setBackground(new java.awt.Color(153, 204, 255));
+        jLabelmodfDuracionC.setBackground(new java.awt.Color(153, 204, 255));
+        jLabelmodfAlbumC.setBackground(new java.awt.Color(153, 204, 255));
+        jLabelmodfArtistaC.setBackground(new java.awt.Color(153, 204, 255));
+        jComboBoxCanciones.setBackground(new java.awt.Color(51, 204, 255));
+        jTextField_Duracion_album.setBackground(new java.awt.Color(102, 204, 255));
+        jTextField_Modf_Nombre_cancion.setBackground(new java.awt.Color(102, 204, 255));
+        jTextField_Nombre_cancion.setBackground(new java.awt.Color(102, 204, 255));
+        jTextField_Modf_Duracion_cancion.setBackground(new java.awt.Color(102, 204, 255));
+        jTextField_Duracion_cancion.setBackground(new java.awt.Color(102, 204, 255));
+        jComboBoxModfAlbumesC.setBackground(new java.awt.Color(51, 204, 255));
+        jButton_Añadir_Artista.setBackground(new java.awt.Color(51, 204, 255));
+        jComboBoxModfArtistasCancion.setBackground(new java.awt.Color(51, 204, 255));
+        jButton_Añadir_Album.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonModificar.setBackground(new java.awt.Color(51, 204, 255));
+        jButton_Añadir_Cancion.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonCrearTabla.setBackground(new java.awt.Color(51, 204, 255));
+        jComboBoxArtistasAlbum.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonRellenarTabla.setBackground(new java.awt.Color(51, 204, 255));
+        jComboBoxAlbumes.setBackground(new java.awt.Color(51, 204, 255));
+        jLabelSELECTS.setBackground(new java.awt.Color(153, 204, 255));
+        jComboBoxArtistasCancion.setBackground(new java.awt.Color(51, 204, 255));
+        jLabelDELETES.setBackground(new java.awt.Color(153, 204, 255));
+        jLabelDesconectar.setBackground(new java.awt.Color(153, 204, 255));
+        jLabelALTER_CREATE.setBackground(new java.awt.Color(153, 204, 255));
+        jButtonDesconectar.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonBorrarTabla.setBackground(new java.awt.Color(51, 204, 255));
+        jLabelINSERTS.setBackground(new java.awt.Color(153, 204, 255));
+        jTextField_Nombre_artista.setBackground(new java.awt.Color(102, 204, 255));
+        jTextField_Nombre_album.setBackground(new java.awt.Color(102, 204, 255));
+        jTextField_Fech_publ_album.setBackground(new java.awt.Color(102, 204, 255));
+        jTextFieldBuscar_cancion.setBackground(new java.awt.Color(102, 204, 255));
+        jTextFieldBuscar_album.setBackground(new java.awt.Color(102, 204, 255));
+        jButton_Borrar_Artista.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonBuscarCancion.setBackground(new java.awt.Color(51, 204, 255));
+        jButton_Borrar_Album.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonBuscarAlbum.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonModoNoche.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonModoDia.setBackground(new java.awt.Color(51, 204, 255));
+        jTextAreaQuerys.setForeground(new java.awt.Color(0, 0, 0));
+        jButton_Borrar_Cancion.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonSelectArtista.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField_Nombre_borrar_Arts.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonSelectAll.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField_Nombre_borrar_Canc.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonSelectCancion.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField_Nombre_borrar_Album.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonSelectAlbum.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelIUPDATES.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonConectar.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelmodfNombreC.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelmodfDuracionC.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelmodfAlbumC.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelmodfArtistaC.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBoxCanciones.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField_Duracion_album.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField_Modf_Nombre_cancion.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField_Nombre_cancion.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField_Modf_Duracion_cancion.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField_Duracion_cancion.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBoxModfAlbumesC.setForeground(new java.awt.Color(0, 0, 0));
+        jButton_Añadir_Artista.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBoxModfArtistasCancion.setForeground(new java.awt.Color(0, 0, 0));
+        jButton_Añadir_Album.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonModificar.setForeground(new java.awt.Color(0, 0, 0));
+        jButton_Añadir_Cancion.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonCrearTabla.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBoxArtistasAlbum.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonRellenarTabla.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBoxAlbumes.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelSELECTS.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBoxArtistasCancion.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelDELETES.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelDesconectar.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelALTER_CREATE.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonDesconectar.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonBorrarTabla.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelINSERTS.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField_Nombre_artista.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField_Nombre_album.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField_Fech_publ_album.setForeground(new java.awt.Color(0, 0, 0));
+        jTextFieldBuscar_cancion.setForeground(new java.awt.Color(0, 0, 0));
+        jTextFieldBuscar_album.setForeground(new java.awt.Color(0, 0, 0));
+        jButton_Borrar_Artista.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonBuscarCancion.setForeground(new java.awt.Color(0, 0, 0));
+        jButton_Borrar_Album.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonBuscarAlbum.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonModoNoche.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonModoDia.setForeground(new java.awt.Color(0, 0, 0));
+    }
+
 }
