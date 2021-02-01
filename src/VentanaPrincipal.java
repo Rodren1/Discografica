@@ -83,6 +83,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButtonBuscarAlbum = new javax.swing.JButton();
         jButtonModoNoche = new javax.swing.JButton();
         jButtonModoDia = new javax.swing.JButton();
+        jButtonCrearBBDD = new javax.swing.JButton();
+        jButtonBorrarBBDD = new javax.swing.JButton();
 
         jDialog1.setResizable(false);
         jDialog1.setSize(new java.awt.Dimension(500, 650));
@@ -417,6 +419,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButtonCrearBBDD.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonCrearBBDD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-reestablecer-las-bases-de-datos-30.png"))); // NOI18N
+        jButtonCrearBBDD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrearBBDDActionPerformed(evt);
+            }
+        });
+
+        jButtonBorrarBBDD.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonBorrarBBDD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-exportación-de-base-de-datos-30.png"))); // NOI18N
+        jButtonBorrarBBDD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBorrarBBDDActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -489,38 +507,47 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonSelectAlbum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonSelectCancion, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)))
+                            .addComponent(jButtonSelectCancion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonBorrarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButtonCrearTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonRellenarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabelDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonConectar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonModoDia, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonModoNoche, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButtonCrearTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonRellenarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabelDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonConectar, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonCrearBBDD, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonBorrarBBDD, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonModoDia, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonModoNoche, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabelDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonConectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButtonModoNoche, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonModoDia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonCrearBBDD, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButtonModoDia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonModoNoche, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonConectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonDesconectar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jButtonBorrarBBDD, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelALTER_CREATE, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -725,15 +752,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jButtonConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConectarActionPerformed
         if (ges.GestorConexion() == 0) {
-            System.out.println("Conectado a discográfica");
+            System.out.println("Conexión establecida correctamente");
             rellenarBoxAlbumes();
             rellenarBoxArtistas();
             rellenarBoxCanciones();
             conectar();
         } else if (ges.GestorConexion() == 1) {
-            System.out.println("No fue posible conectarse a la bbdd");
+            System.out.println("No fue posible establecer una conexión");
         } else {
-            System.out.println("Error en la conexion a discográfica");
+            System.out.println("Error en la conexion");
         }
     }//GEN-LAST:event_jButtonConectarActionPerformed
 
@@ -744,6 +771,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void jButtonModoDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModoDiaActionPerformed
         modoDia();
     }//GEN-LAST:event_jButtonModoDiaActionPerformed
+
+    private void jButtonCrearBBDDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearBBDDActionPerformed
+        ges.crearBBDD();
+    }//GEN-LAST:event_jButtonCrearBBDDActionPerformed
+
+    private void jButtonBorrarBBDDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBorrarBBDDActionPerformed
+        ges.borrarBBDD();
+    }//GEN-LAST:event_jButtonBorrarBBDDActionPerformed
 
     private void rellenarBoxArtistas() {
         jComboBoxArtistasAlbum.removeAllItems();
@@ -861,10 +896,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonBorrarBBDD;
     private javax.swing.JButton jButtonBorrarTabla;
     private javax.swing.JButton jButtonBuscarAlbum;
     private javax.swing.JButton jButtonBuscarCancion;
     private javax.swing.JButton jButtonConectar;
+    private javax.swing.JButton jButtonCrearBBDD;
     private javax.swing.JButton jButtonCrearTabla;
     private javax.swing.JButton jButtonDesconectar;
     private javax.swing.JButton jButtonModificar;
@@ -1018,6 +1055,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButtonBuscarAlbum.setForeground(new java.awt.Color(255, 255, 255));
         jButtonModoNoche.setForeground(new java.awt.Color(255, 255, 255));
         jButtonModoDia.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonCrearBBDD.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonBorrarBBDD.setBackground(new java.awt.Color(0, 102, 102));
     }
 
     public void modoDia() {
@@ -1123,6 +1162,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButtonBuscarAlbum.setForeground(new java.awt.Color(0, 0, 0));
         jButtonModoNoche.setForeground(new java.awt.Color(0, 0, 0));
         jButtonModoDia.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonCrearBBDD.setBackground(new java.awt.Color(51,204,255));
+        jButtonBorrarBBDD.setBackground(new java.awt.Color(51,204,255));
     }
 
 }
