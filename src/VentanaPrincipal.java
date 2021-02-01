@@ -18,7 +18,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public VentanaPrincipal() {
         initComponents();
         deshabilitarBotones();
-        setIconImage(new ImageIcon(getClass().getResource("/img/icons8-cd-30.png")).getImage());
+        setIconImage(new ImageIcon(getClass().getResource("/img/icons8-cd-30.png")).getImage());//cambia el icono del jFrame
     }
 
     /**
@@ -659,7 +659,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonDesconectarActionPerformed
 
     private void jButtonBorrarTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBorrarTablaActionPerformed
-        ges.dropTable();
+        ges.dropTable();//una vez borrada la tabla deshabilita el propio botón y habilita el botón para crearla de nuevo
         jButtonCrearTabla.setEnabled(true);
         jButtonBorrarTabla.setEnabled(false);
     }//GEN-LAST:event_jButtonBorrarTablaActionPerformed
@@ -670,8 +670,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_Añadir_ArtistaActionPerformed
 
     private void jButton_Añadir_AlbumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Añadir_AlbumActionPerformed
-        String artista = (String) jComboBoxArtistasAlbum.getSelectedItem();
-        int id_artista = Integer.parseInt(artista.split(" ")[0]);
+        String artista = (String) jComboBoxArtistasAlbum.getSelectedItem();//creo una variable string y casteo el valor del combobox seleccionado*
+        int id_artista = Integer.parseInt(artista.split(" ")[0]);//vuelvo a castear ese valor a int y le paso el valor 0(teniendo en cuenta que el id siempre esta en esa posicion) 
+        //del array creado por el split dividiendo el string por los espacios
+        //esto evita errores de seleccion si se borrasen datos en la tabla*
+        
         ges.insertarAlbum(jTextField_Nombre_album.getText(), jTextField_Fech_publ_album.getText(), jTextField_Duracion_album.getText(),
                 id_artista);
         jTextField_Nombre_album.setText("");
@@ -680,8 +683,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_Añadir_AlbumActionPerformed
 
     private void jButton_Añadir_CancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Añadir_CancionActionPerformed
-        String album = (String) jComboBoxAlbumes.getSelectedItem();
-        int id_album = Integer.parseInt(album.split(" ")[0]);
+        String album = (String) jComboBoxAlbumes.getSelectedItem();//*
+        int id_album = Integer.parseInt(album.split(" ")[0]);//*
         String artista = (String) jComboBoxArtistasCancion.getSelectedItem();
         int id_artista = Integer.parseInt(artista.split(" ")[0]);
         ges.insertarCancion(jTextField_Nombre_cancion.getText(), jTextField_Duracion_cancion.getText(), id_album, id_artista);
@@ -705,8 +708,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_Borrar_CancionActionPerformed
 
     private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
-        String album = (String) jComboBoxModfAlbumesC.getSelectedItem();
-        int id_album = Integer.parseInt(album.split(" ")[0]);
+        String album = (String) jComboBoxModfAlbumesC.getSelectedItem();//creo una variable string y casteo el valor del combobox seleccionado
+        int id_album = Integer.parseInt(album.split(" ")[0]);//vuelvo a castear ese valor a int y le paso el valor 0(teniendo en cuenta que el id siempre esta en esa posicion) 
+        //del array creado por el split dividiendo el string por los espacios
+        //esto evita errores de seleccion si se borrasen datos en la tabla
+        
         String artista = (String) jComboBoxModfArtistasCancion.getSelectedItem();
         int id_artista = Integer.parseInt(artista.split(" ")[0]);
         String cancion = (String) jComboBoxCanciones.getSelectedItem();
@@ -719,6 +725,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jButtonCrearTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearTablaActionPerformed
         ges.createTable();
+        //una vez creada la tabla deshabilita el propio botón y habilita el de inserción y el de borrado
         jButtonCrearTabla.setEnabled(false);
         jButtonBorrarTabla.setEnabled(true);
         jButtonRellenarTabla.setEnabled(true);
@@ -726,9 +733,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void jButtonRellenarTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRellenarTablaActionPerformed
         ges.fillTable();
-        jButtonRellenarTabla.setEnabled(false);
+        jButtonRellenarTabla.setEnabled(false);//una vez insertados los datos se deshabilita el botón para evitar duplicaciones
     }//GEN-LAST:event_jButtonRellenarTablaActionPerformed
 
+    //los botones de las consultas muestran los datos en un textArea alojado en un jDialog para optimizar espacio en la interfaz
     private void jButtonBuscarCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarCancionActionPerformed
         jTextAreaQuerys.setText(ges.buscarCancion(jTextFieldBuscar_cancion.getText()));
         jDialog1.setVisible(true);
@@ -761,10 +769,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jDialog1.setVisible(true);
     }//GEN-LAST:event_jButtonSelectCancionActionPerformed
 
+    //este botón sirve a su vez para conectar con el servidor/bbdd como para actualizar la conexión en caso de cambios
     private void jButtonConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConectarActionPerformed
         if (ges.GestorConexion() == 0) {
             System.out.println("Conexión establecida correctamente");
-            deshabilitarBotones();
+            deshabilitarBotones();//esto es solo en el caso de haber conectado con la bbdd, borrarla y actualizar la conexión, algunos combobox no se vacían
+            //con los combobox vacios los rellena y luego habilita todos los botones
             rellenarBoxAlbumes();
             rellenarBoxArtistas();
             rellenarBoxCanciones();
@@ -792,7 +802,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         ges.borrarBBDD();
     }//GEN-LAST:event_jButtonBorrarBBDDActionPerformed
 
+    //este método rellena los combobox relacionados a los artistas con el método arraylist creado en la clase del gestor
     private void rellenarBoxArtistas() {
+        //primero eimina los datos por defecto para llenarlos con los datos deseados
         jComboBoxArtistasAlbum.removeAllItems();
         jComboBoxArtistasCancion.removeAllItems();
         jComboBoxModfArtistasCancion.removeAllItems();
@@ -805,6 +817,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }
 
+    //este método y el siguiente hacen lo mismo que el anterior pero con sus respectivos datos
     private void rellenarBoxAlbumes() {
         jComboBoxAlbumes.removeAllItems();
         jComboBoxModfAlbumesC.removeAllItems();
@@ -825,6 +838,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
     }
 
+    //este método deshabilita todos los botones y vacia los combobox en caso de no estar conectado a la bbdd o de haber
+    //finalizado la conexión
     private void deshabilitarBotones() {
         jButtonDesconectar.setEnabled(false);
         jButtonCrearTabla.setEnabled(false);
@@ -853,6 +868,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     }
 
+    //este método habilita todos los botones de la interfaz, usado despues de haber conectado con la base de datos
     private void conectar() {
         jButtonCrearTabla.setEnabled(true);
         jButton_Añadir_Artista.setEnabled(true);
@@ -965,6 +981,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField_Nombre_cancion;
     // End of variables declaration//GEN-END:variables
 
+    //estos dos métodos cambian el color del fondo y del texto de todos los componentes 
+    //para ajustar la interfaz a un modo dia y uno noche
     public void modoNoche() {
         jTextAreaQuerys.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
