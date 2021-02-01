@@ -395,4 +395,71 @@ public class GestorConexion {
         }
     }
 
+  /*
+    CREATE DATABASE `discograficajavierbermejo`;
+
+USE discograficajavierbermejo;
+
+CREATE TABLE `artistas`(
+  `id_artista` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_artista` varchar(20) NOT NULL,  
+  PRIMARY KEY (`id_artista`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+CREATE TABLE `albumes` (
+  `id_album` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_album` varchar(40) NOT NULL,
+  `fech_publ` varchar(20) DEFAULT NULL,
+  `duracion` varchar(20) DEFAULT NULL,
+  `artista_album` int(11) NOT NULL,
+  PRIMARY KEY (`id_album`),
+  FOREIGN KEY (`artista_album`) REFERENCES `artistas` (`id_artista`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+CREATE TABLE `canciones` (
+  `id_cancion` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_cancion` varchar(40) NOT NULL,
+  `duracion` varchar(20) DEFAULT NULL,
+  `album` int(11) NOT NULL,
+  `artista_cancion` int(11) NOT NULL,
+  PRIMARY KEY (`id_cancion`),
+  FOREIGN KEY (`album`) REFERENCES `albumes` (`id_album`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`artista_cancion`) REFERENCES `artistas` (`id_artista`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+INSERT INTO `artistas` (`nombre_artista`) VALUES
+('The HU'),
+('The Score'),
+('Wardruna'),
+('Skáld');
+
+INSERT INTO `albumes` (`nombre_album`, `fech_publ`, `duracion`, `artista_album`) VALUES
+('Breathe You Got This', '2020', '00:20:53', 2),
+('The Gereg', '2019', '00:47:45', 1),
+('Skáld', '2018', '00:09:55', 4),
+('Yggdrasil', '2013', '01:06:00', 3);
+
+INSERT INTO `canciones` (`nombre_cancion`, `duracion`, `album`, `artista_cancion`) VALUES
+('Fehu', '00:06:45', 4, 3),
+('Gibu', '00:05:30', 4, 3),
+('NaudiR', '00:06:31', 4, 3),
+('AnsuR', '00:06:31', 4, 3),
+('Yuve Yuve Yu', '00:04:14', 2, 1),
+('Wolf Totem', '00:05:38', 2, 1),
+('Sugaan Essena', '00:06:36', 2, 1),
+('The Legend of Mother Swan', '00:05:25', 2, 1),
+('Níu', '00:03:05', 3, 4),
+('Flúga', '00:02:32', 3, 4),
+('Ó Valhalla', '00:03:35', 3, 4),
+('Comeback', '00:03:43', 1, 2),
+('Bulletproof', '00:03:10', 1, 2),
+('Golden', '00:03:06', 1, 2),
+('Revolution', '00:03:52', 1, 2);
+    
+    */  
+    
+    
+    
+    
 }
