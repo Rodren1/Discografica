@@ -341,7 +341,7 @@ public class GestorConexion {
             Statement sta = conn1.createStatement();
             ResultSet rs = sta.executeQuery(query);
             while (rs.next()) {
-                list.add(rs.getString("nombre_artista"));
+                list.add(rs.getInt("id_artista") + " - " + rs.getString("nombre_artista"));
             }
             rs.close();
             sta.close();
@@ -361,7 +361,7 @@ public class GestorConexion {
             Statement sta = conn1.createStatement();
             ResultSet rs = sta.executeQuery(query);
             while (rs.next()) {
-                list.add(rs.getString("nombre_album"));
+                list.add(rs.getInt("id_album") + " - " + rs.getString("nombre_album"));
             }
             rs.close();
             sta.close();
@@ -381,7 +381,7 @@ public class GestorConexion {
             Statement sta = conn1.createStatement();
             ResultSet rs = sta.executeQuery(query);
             while (rs.next()) {
-                list.add(rs.getString("nombre_cancion"));
+                list.add(rs.getInt("id_cancion") + " - " + rs.getString("nombre_cancion"));
             }
             rs.close();
             sta.close();
@@ -398,7 +398,7 @@ public class GestorConexion {
         urlBBDD = "jdbc:mysql://localhost:3306/discograficajavierbermejo?serverTimexone=UTC";
         try {
             Statement sta = conn1.createStatement();
-            sta.executeUpdate("CREATE DATABASE `discograficajavierbermejo`;");
+            sta.executeUpdate("CREATE DATABASE IF NOT EXISTS `discograficajavierbermejo`;");
             sta.executeUpdate("USE discograficajavierbermejo;");
             sta.executeUpdate("CREATE TABLE `artistas`( `id_artista` int(11) NOT NULL AUTO_INCREMENT, `nombre_artista` varchar(20) NOT NULL,   PRIMARY KEY (`id_artista`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;");
             sta.executeUpdate("CREATE TABLE `albumes` ( `id_album` int(11) NOT NULL AUTO_INCREMENT, `nombre_album` varchar(40) NOT NULL, `fech_publ` varchar(20) DEFAULT NULL, `duracion` varchar(20) DEFAULT NULL, `artista_album` int(11) NOT NULL, PRIMARY KEY (`id_album`), FOREIGN KEY (`artista_album`) REFERENCES `artistas` (`id_artista`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;");

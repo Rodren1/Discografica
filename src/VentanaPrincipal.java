@@ -670,16 +670,21 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_Añadir_ArtistaActionPerformed
 
     private void jButton_Añadir_AlbumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Añadir_AlbumActionPerformed
+        String artista = (String) jComboBoxArtistasAlbum.getSelectedItem();
+        int id_artista = Integer.parseInt(artista.split(" ")[0]);
         ges.insertarAlbum(jTextField_Nombre_album.getText(), jTextField_Fech_publ_album.getText(), jTextField_Duracion_album.getText(),
-                jComboBoxArtistasAlbum.getSelectedIndex() + 1);
+                id_artista);
         jTextField_Nombre_album.setText("");
         jTextField_Fech_publ_album.setText("");
         jTextField_Duracion_album.setText("");
     }//GEN-LAST:event_jButton_Añadir_AlbumActionPerformed
 
     private void jButton_Añadir_CancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Añadir_CancionActionPerformed
-        ges.insertarCancion(jTextField_Nombre_cancion.getText(), jTextField_Duracion_cancion.getText(), jComboBoxAlbumes.getSelectedIndex() + 1,
-                jComboBoxArtistasCancion.getSelectedIndex() + 1);
+        String album = (String) jComboBoxAlbumes.getSelectedItem();
+        int id_album = Integer.parseInt(album.split(" ")[0]);
+        String artista = (String) jComboBoxArtistasCancion.getSelectedItem();
+        int id_artista = Integer.parseInt(artista.split(" ")[0]);
+        ges.insertarCancion(jTextField_Nombre_cancion.getText(), jTextField_Duracion_cancion.getText(), id_album, id_artista);
         jTextField_Nombre_cancion.setText("");
         jTextField_Duracion_cancion.setText("");
     }//GEN-LAST:event_jButton_Añadir_CancionActionPerformed
@@ -700,8 +705,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_Borrar_CancionActionPerformed
 
     private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
+        String album = (String) jComboBoxModfAlbumesC.getSelectedItem();
+        int id_album = Integer.parseInt(album.split(" ")[0]);
+        String artista = (String) jComboBoxModfArtistasCancion.getSelectedItem();
+        int id_artista = Integer.parseInt(artista.split(" ")[0]);
+        String cancion = (String) jComboBoxCanciones.getSelectedItem();
+        int id_cancion = Integer.parseInt(cancion.split(" ")[0]);
         ges.modificar(jTextField_Modf_Nombre_cancion.getText(), jTextField_Modf_Duracion_cancion.getText(),
-                jComboBoxModfAlbumesC.getSelectedIndex() + 1, jComboBoxModfArtistasCancion.getSelectedIndex() + 1, jComboBoxCanciones.getSelectedIndex() + 1);
+                id_album, id_artista, id_cancion);
         jTextField_Modf_Nombre_cancion.setText("");
         jTextField_Modf_Duracion_cancion.setText("");
     }//GEN-LAST:event_jButtonModificarActionPerformed
