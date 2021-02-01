@@ -764,6 +764,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void jButtonConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConectarActionPerformed
         if (ges.GestorConexion() == 0) {
             System.out.println("Conexión establecida correctamente");
+            deshabilitarBotones();
             rellenarBoxAlbumes();
             rellenarBoxArtistas();
             rellenarBoxCanciones();
