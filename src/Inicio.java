@@ -1,14 +1,11 @@
 
 import javax.swing.ImageIcon;
 
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Javi
@@ -21,7 +18,6 @@ public class Inicio extends javax.swing.JFrame {
     public Inicio() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/img/icons8-cd-30.png")).getImage());
-        
     }
 
     /**
@@ -34,8 +30,10 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelImagen = new javax.swing.JLabel();
+        jButtonEntrar = new javax.swing.JButton();
+        jButtonNoche = new javax.swing.JButton();
+        jButtonDia = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -43,19 +41,37 @@ public class Inicio extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton1.setBackground(new java.awt.Color(51, 204, 255));
-        jButton1.setText("ENTRAR");
-        jButton1.setBorder(new javax.swing.border.MatteBorder(null));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jLabelImagen.setBackground(new java.awt.Color(153, 204, 255));
+        jLabelImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/inicio.png"))); // NOI18N
+        jLabelImagen.setBorder(new javax.swing.border.MatteBorder(null));
+        jLabelImagen.setOpaque(true);
+
+        jButtonEntrar.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonEntrar.setText("ENTRAR");
+        jButtonEntrar.setBorder(new javax.swing.border.MatteBorder(null));
+        jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonEntrarActionPerformed(evt);
             }
         });
 
-        jLabel1.setBackground(new java.awt.Color(153, 204, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/inicio.png"))); // NOI18N
-        jLabel1.setBorder(new javax.swing.border.MatteBorder(null));
-        jLabel1.setOpaque(true);
+        jButtonNoche.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonNoche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-luna-brillante-32 (2).png"))); // NOI18N
+        jButtonNoche.setBorder(new javax.swing.border.MatteBorder(null));
+        jButtonNoche.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonNocheActionPerformed(evt);
+            }
+        });
+
+        jButtonDia.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonDia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-salida-del-sol-32.png"))); // NOI18N
+        jButtonDia.setBorder(new javax.swing.border.MatteBorder(null));
+        jButtonDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDiaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -64,18 +80,28 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabelImagen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(64, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonDia, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonNoche, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, Short.MAX_VALUE)
+                .addComponent(jLabelImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 223, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64))
+                .addComponent(jButtonEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonNoche, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonDia, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -93,11 +119,19 @@ public class Inicio extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
         VentanaPrincipal vp = new VentanaPrincipal();
         vp.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonEntrarActionPerformed
+
+    private void jButtonDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDiaActionPerformed
+        modoDia();
+    }//GEN-LAST:event_jButtonDiaActionPerformed
+
+    private void jButtonNocheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNocheActionPerformed
+        modoNoche();
+    }//GEN-LAST:event_jButtonNocheActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,8 +169,55 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButtonDia;
+    private javax.swing.JButton jButtonEntrar;
+    private javax.swing.JButton jButtonNoche;
+    private javax.swing.JLabel jLabelImagen;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
+    public void modoDia() {
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonEntrar.setBackground(new java.awt.Color(51, 204, 255));
+        jLabelImagen.setBackground(new java.awt.Color(153, 204, 255));
+        jButtonDia.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonNoche.setBackground(new java.awt.Color(51, 204, 255));
+        jButtonEntrar.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonDia.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonNoche.setForeground(new java.awt.Color(0, 0, 0));
+    }
+
+    public void modoNoche() {
+        jPanel1.setBackground(new java.awt.Color(0, 51, 51));
+        jLabelImagen.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonEntrar.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonNoche.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonDia.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonEntrar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonDia.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonNoche.setForeground(new java.awt.Color(255, 255, 255));
+    }
+    
+    public void modoDiaVerde() {
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonEntrar.setBackground(new java.awt.Color(0, 255, 153));
+        jLabelImagen.setBackground(new java.awt.Color(0, 255, 51));
+        jButtonDia.setBackground(new java.awt.Color(0, 255, 153));
+        jButtonNoche.setBackground(new java.awt.Color(0, 255, 153));
+        jButtonEntrar.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonDia.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonNoche.setForeground(new java.awt.Color(0, 0, 0));
+    }
+
+    public void modoNocheVerde() {
+        jPanel1.setBackground(new java.awt.Color(0, 51, 0));
+        jLabelImagen.setBackground(new java.awt.Color(0, 153, 102));
+        jButtonEntrar.setBackground(new java.awt.Color(51, 102, 0));
+        jButtonNoche.setBackground(new java.awt.Color(51, 102, 0));
+        jButtonDia.setBackground(new java.awt.Color(51, 102, 0));
+        jButtonEntrar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonDia.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonNoche.setForeground(new java.awt.Color(255, 255, 255));
+    }
+
 }
