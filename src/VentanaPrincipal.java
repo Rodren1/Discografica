@@ -656,6 +656,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void jButtonDesconectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDesconectarActionPerformed
         ges.cerrar_conexion();
         deshabilitarBotones();
+        Inicio ini = new Inicio();
+        ini.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButtonDesconectarActionPerformed
 
     private void jButtonBorrarTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBorrarTablaActionPerformed
@@ -918,7 +921,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaPrincipal().setVisible(true);
+                new VentanaPrincipal().setVisible(false);
+                new Inicio().setVisible(true);
             }
         });
     }
